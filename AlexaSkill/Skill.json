@@ -1,0 +1,281 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "c. r. m. management",
+            "modelConfiguration": {
+                "fallbackIntentSensitivity": {
+                    "level": "LOW"
+                }
+            },
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "OneProductIntent",
+                    "slots": [
+                        {
+                            "name": "name",
+                            "type": "AMAZON.FirstName"
+                        }
+                    ],
+                    "samples": [
+                        "fetch me details of  product {name}",
+                        "can i get details of product {name}",
+                        "details of product {name}",
+                        "get me details of product  {name}"
+                    ]
+                },
+                {
+                    "name": "DealProductIntent",
+                    "slots": [
+                        {
+                            "name": "name",
+                            "type": "AMAZON.FirstName"
+                        }
+                    ],
+                    "samples": [
+                        "get me deal data of {name}",
+                        "deal data of product {name}",
+                        "data of deal with product {name}",
+                        "get me data about deal with product {name}"
+                    ]
+                },
+                {
+                    "name": "AddProductIntent",
+                    "slots": [
+                        {
+                            "name": "name",
+                            "type": "AMAZON.FirstName"
+                        },
+                        {
+                            "name": "unit",
+                            "type": "AMAZON.NUMBER"
+                        },
+                        {
+                            "name": "price",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "add {name} with {unit} unit and price is  {price}",
+                        "add {name} with {unit} unit and {price} as price ",
+                        "add {name} with {unit} unit and {price} INR",
+                        "add product {name} with  {price} and {unit} unit"
+                    ]
+                },
+                {
+                    "name": "DeleteProductIntent",
+                    "slots": [
+                        {
+                            "name": "name",
+                            "type": "AMAZON.FirstName"
+                        }
+                    ],
+                    "samples": [
+                        "delete product with name {name}",
+                        "can i delete product {name}",
+                        "delete product {name}"
+                    ]
+                },
+                {
+                    "name": "PersonDetailIntent",
+                    "slots": [
+                        {
+                            "name": "name",
+                            "type": "AMAZON.FirstName"
+                        }
+                    ],
+                    "samples": [
+                        "i want a detalied information of contact {name}",
+                        "details of contact {name}",
+                        "get me details of contact {name}",
+                        "get details of contact {name}",
+                        "get detail of a person {name}"
+                    ]
+                },
+                {
+                    "name": "ListActivitiesIntent",
+                    "slots": [
+                        {
+                            "name": "name",
+                            "type": "AMAZON.FirstName"
+                        }
+                    ],
+                    "samples": [
+                        "i want details of activities associated with {name}",
+                        "activities associated with person {name}",
+                        "activities associated with {name}",
+                        "list the activities associated with {name}"
+                    ]
+                },
+                {
+                    "name": "ListProductIntent",
+                    "slots": [
+                        {
+                            "name": "name",
+                            "type": "AMAZON.FirstName"
+                        }
+                    ],
+                    "samples": [
+                        "get me product associated with person {name}",
+                        "get me products which is associated with {name}",
+                        "list product associated with {name}",
+                        "list me the product associated with {name}"
+                    ]
+                },
+                {
+                    "name": "AddPersonIntent",
+                    "slots": [
+                        {
+                            "name": "name",
+                            "type": "AMAZON.FirstName"
+                        },
+                        {
+                            "name": "email",
+                            "type": "AMAZON.FirstName"
+                        },
+                        {
+                            "name": "phone",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "i want to add person in contact with {name}  {phone}  {email} ",
+                        "i want to add person in contact with {name}  {email} {phone}",
+                        "add person {name} {phone}  {email}",
+                        "add a person with {name}  {phone} and {email}"
+                    ]
+                },
+                {
+                    "name": "DeletePersonIntent",
+                    "slots": [
+                        {
+                            "name": "name",
+                            "type": "AMAZON.FirstName"
+                        }
+                    ],
+                    "samples": [
+                        "i want to delete contact {name}",
+                        "i want to delete {name} record",
+                        "delete a person with name {name}",
+                        "delete {name} contact"
+                    ]
+                },
+                {
+                    "name": "ActivitiesAssignedIntent",
+                    "slots": [
+                        {
+                            "name": "name",
+                            "type": "AMAZON.FirstName"
+                        }
+                    ],
+                    "samples": [
+                        "recent activity of user {name}",
+                        "details of recent assigned activity of user {name}",
+                        "get me recent activity assigned to user {name}"
+                    ]
+                },
+                {
+                    "name": "AddActivityIntent",
+                    "slots": [
+                        {
+                            "name": "subject",
+                            "type": "AMAZON.FirstName"
+                        },
+                        {
+                            "name": "type",
+                            "type": "AMAZON.FirstName"
+                        },
+                        {
+                            "name": "name",
+                            "type": "AMAZON.FirstName"
+                        }
+                    ],
+                    "samples": [
+                        "add a {type}  on {subject} and associated with person {name}",
+                        "add activity subject as {subject} and type as {type} with {name}",
+                        "add activity on subject {subject} and type {type}  and associated person to activity is {name}"
+                    ]
+                },
+                {
+                    "name": "DeleteActivityIntent",
+                    "slots": [
+                        {
+                            "name": "name",
+                            "type": "AMAZON.FirstName"
+                        }
+                    ],
+                    "samples": [
+                        "i want to delete activity with {name}",
+                        "delete activity with {name}"
+                    ]
+                },
+                {
+                    "name": "AddDealIntent",
+                    "slots": [
+                        {
+                            "name": "title",
+                            "type": "AMAZON.FirstName"
+                        },
+                        {
+                            "name": "value",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "add deal {title} whose worth is {value}",
+                        "add deal with {title} and worth  {value}",
+                        "add deal with {title} and worth is {value}"
+                    ]
+                },
+                {
+                    "name": "DetailOfDealIntent",
+                    "slots": [
+                        {
+                            "name": "dealname",
+                            "type": "AMAZON.FirstName"
+                        }
+                    ],
+                    "samples": [
+                        "details of deal {dealname}",
+                        "fetch me details of deal {dealname}",
+                        "get me details of deal {dealname}"
+                    ]
+                },
+                {
+                    "name": "DeleteDealIntent",
+                    "slots": [
+                        {
+                            "name": "dealname",
+                            "type": "AMAZON.FirstName"
+                        }
+                    ],
+                    "samples": [
+                        "i want to delete {dealname} deal",
+                        "delete {dealname} deal",
+                        "delete a deal {dealname}"
+                    ]
+                }
+            ],
+            "types": []
+        }
+    }
+}
