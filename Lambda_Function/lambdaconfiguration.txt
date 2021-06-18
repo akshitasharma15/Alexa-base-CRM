@@ -1,0 +1,15 @@
+Lambda function configuration 
+
+These are the properties which is used to configure when created lambda function for Alexa
+1. Choose the language in which you want to host your lambda function in.
+    Preferred language :- Python 3.6 
+2. Choose the source from where you want to load your lambda function. 
+    Preferred souce :- Amazon S3 bucket
+3. Choose Timeout value for lambda request.
+4. Choose the Ram that you want to assign your lambda function.
+5. Now Edit the environment variable and set two key value pair
+    Key  : Value
+    PATH : /var/task/bin
+    PYTHONPATH : /var/task/lib
+6. Now Add Alexa Skill Kit as a trigger and exchange the endpoints of Alexa skill and lambda funnction.
+7. Save your function and test it.
